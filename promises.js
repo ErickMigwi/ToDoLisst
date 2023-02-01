@@ -23,27 +23,32 @@ promise.then((message)=>{
 promise.catch((message)=>{
   console.log(message)
 })
-Fetching data from the api
-fetch('https://dummyjson.com/products')
-.then(data=> data.json())
-.then(data=> console.log(data))
-.catch(error=> console.log("Error"))
-.then(data=>{
-  data.product.forEach((data) => {
-  console.log(1)
-})
-})
-function Person(name, age, education){
-  this.FirstName= name,
-  this. age= age,
-  this.education= education,
-  this.id = 30029
+//Fetching data from the api
 
-}
-
-  let person =new Person("Erick", 21," softDev")
-  console.log(person)
-  Object.defineProperties(Person,'id',{
-    configurable:false
-  })
-  console.log(Person)
+let section = document.getElementById("section-el")
+ let data1 = ""
+ fetch('https://dummyjson.com/products')
+ .then(response=>response.json())
+ .catch(data1=>{
+alert("Error,check URL and try again")
+ })
+ .then(data1=>{
+  data1.products.forEach(element => {
+    console.log(element)
+    section.innerHTML+= 
+   ` <li>
+   <div>
+    <h2> ${element.title}</h3>
+    </div>
+    <div>
+    <img src="${element.images[0]}" alt="Picture of the below product" />
+    </div>
+    <div>
+    <h2>Price:$${element.price}</h3>
+    </div>
+    <div>
+    <p id="descrpition">${element.description}</p>
+    </div>
+</li>`  });
+ })
+ 
