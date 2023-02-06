@@ -27,6 +27,8 @@
     <label for="completionDate-el">Completion Date:</label>
     <input id="completionDate-el" type="date">
     <button id="addTask-btn">Add Task</button>
+    <button id="completed">CompletedTask</button>
+    <button id="uncompleted" onclick="uncomplete()">UncompletedTasks</button>
 </span>
 </div>
 <div id="section2">
@@ -35,6 +37,9 @@
 </div>
 
 <p id="theTask"><ul></ul></p>
+<br>
+<p id="completedTasks">Completed:</p>
+<p id="UncompletedTasks">Uncompleted:</p>
 
 <script src="index.js"></script>
 </body>

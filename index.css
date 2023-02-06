@@ -8,6 +8,9 @@
    
     
 }
+body{
+    background-color: gray;
+}
 nav{
     display: flex;
     flex-direction: row;
@@ -101,4 +104,12 @@ nav a{
 #theTask #date{
     color: white;
     margin-right: 50px;
+}
+#completedTasks{
+    background-color: green;
+    color:goldenrod
+}
+#UncompletedTasks{
+    background-color: darkblue;
+    color: burlywood;
 }
