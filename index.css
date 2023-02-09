@@ -106,10 +106,17 @@ nav a{
     margin-right: 50px;
 }
 #completedTasks{
-    background-color: green;
-    color:goldenrod
+    background-color: orangered;
+    color:white
 }
 #UncompletedTasks{
     background-color: darkblue;
     color: burlywood;
+}
+button{
+    padding: 10px;
+    border-radius: 15px;
+    font-weight: bold;
+    background-color: orangered;
+    color: white;
 }
